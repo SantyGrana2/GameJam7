@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/ProgJaider Es1.unity
+    guid: 19e2a9c5d60cae44194a36d76afc5684
+  - enabled: 1
+    path: Assets/Scenes/ProgJaider Es2.unity
+    guid: cd321a27cd2293749ac743024ff2b6fe
+  - enabled: 1
+    path: Assets/Scenes/ProgJaider Es3.unity
+    guid: 02f74fc088fc9c14da742162fffb43eb
+  - enabled: 1
+    path: Assets/Scenes/ProgJaider Es4.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
