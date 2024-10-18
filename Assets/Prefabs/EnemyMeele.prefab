@@ -45,9 +45,8 @@ GameObject:
   - component: {fileID: 4138054660537648179}
   - component: {fileID: 3683499368513897357}
   - component: {fileID: 940515174261830303}
-  - component: {fileID: 2574602047277073658}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyMeele
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
-  maxHealth: 10
+  maxHealth: 25
 --- !u!114 &3683499368513897357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,17 +207,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2574602047277073658
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4690294475050063436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59c55bdcbe80f9c4384524c5b89f63c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
-  bulletPos: {fileID: 5506112185025308927}
