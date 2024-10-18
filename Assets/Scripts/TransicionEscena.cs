@@ -20,10 +20,20 @@ public class TransicionEscena : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(puerta.tocoPuerta)
+        try
+        {
+            if(puerta.tocoPuerta)
         {
             StartCoroutine(CambiarEscena());
         }
+        }
+        catch (System.Exception)
+        {
+            // Código para manejar la excepción
+            Debug.LogError("Nivel final");
+        }
+
+        
     }
 
     IEnumerator CambiarEscena()
@@ -33,5 +43,7 @@ public class TransicionEscena : MonoBehaviour
         SceneManager.LoadScene(siguienteEscena);
 
     }
+
+    
 
 }

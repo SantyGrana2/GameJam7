@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 1903452276714690057}
   - component: {fileID: 8517891664004578146}
   - component: {fileID: 9060576504237784947}
+  - component: {fileID: 2330126058848246313}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -159,3 +160,19 @@ MonoBehaviour:
   bullet: {fileID: 6180874330552204069, guid: 01184c65697c0b24b9ff6a269fa47ed6, type: 3}
   ShootPosition: {fileID: 2532194914409440939}
   multiplierSpeed: 10
+--- !u!114 &2330126058848246313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5208810372250714724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99e3d6b521149f641b8e705a33c68010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6180874330552204069, guid: 01184c65697c0b24b9ff6a269fa47ed6, type: 3}
+  hasPowerup: 0
+  powerupIndicator: {fileID: 3060261480194602000, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+  speedObjectPlus: 60
