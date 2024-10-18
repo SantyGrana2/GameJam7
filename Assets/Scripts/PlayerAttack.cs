@@ -9,7 +9,7 @@ public class PlayerAttack : MonoBehaviour
     float atkDuration = 0.3f;
     float atkTimer = 0f;
 
-    public Health enemy;
+    public Health[] enemies;
 
     [SerializeField]
     private int damage;
@@ -78,9 +78,11 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (isAttacking && other.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(damage);
+            Health enemyHealth = other.GetComponent<Health>();
+            enemyHealth.TakeDamage(damage);
         }
     }
 }
