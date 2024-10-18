@@ -9,10 +9,6 @@ public class AIEnemy : MonoBehaviour
     [SerializeField]
     private float speed;
     private float distance;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
