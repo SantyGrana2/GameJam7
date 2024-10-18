@@ -5,8 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+<<<<<<< HEAD
   - Puerta
   - PuLife
+=======
+  - Bullet
+>>>>>>> Santy
   layers:
   - Default
   - TransparentFX
