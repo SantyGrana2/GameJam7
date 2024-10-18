@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform aim;
     bool isWalking = false;
+    public bool tocoPuerta = false;
 
     void Start()
     {
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Guardar la última dirección en la que se movió
+        //Guardar la ï¿½ltima direcciï¿½n en la que se moviï¿½
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 

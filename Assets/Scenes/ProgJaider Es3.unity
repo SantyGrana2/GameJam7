@@ -628,7 +628,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3060261480194602000, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
       propertyPath: m_Name
-      value: PowerUpShoot
+      value: PowerUplife
+      objectReference: {fileID: 0}
+    - target: {fileID: 3060261480194602000, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+      propertyPath: m_TagString
+      value: PuLife
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195357545825930255, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195357545825930255, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195357545825930255, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
