@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: c87587e7f13160d48af9605b59d3e3a9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - The Brain
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a3f5263a0b3c81d46b165148ef986be1, type: 3}
+  - {fileID: 12800000, guid: ef95e79572ade33459878e7813272586, type: 3}
+  - {fileID: 12800000, guid: 8f92cc936ab0d0647a291e0fc4c4e73c, type: 3}
+  - {fileID: 12800000, guid: 8a9529f4e0e968b49bd701fe46eb7dc6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 1
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
