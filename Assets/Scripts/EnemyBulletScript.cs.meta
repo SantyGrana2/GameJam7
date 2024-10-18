@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/MoverEscena.cs.meta
+guid: 99acf58bb8fa616418ec969225c45c5d
+========
+guid: e7bf29ed34feaa14ca29830e958d4f2b
+>>>>>>>> Santy:Assets/Scripts/EnemyBulletScript.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

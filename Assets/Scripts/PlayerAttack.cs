@@ -19,18 +19,19 @@ public class PlayerAttack : MonoBehaviour
     public float fireForce;
     public float shootCooldown;
     public float shootTimer;
+    public int damageBullet;
 
     private void Update()
     {
         CheckMeeleTimer();
 
-        shootTimer = Time.deltaTime;
+        shootTimer += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             onAttack();
         }
-        if (Input.GetMouseButton(0) || Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButton(0))
         {
             OnShoot(); 
         }
@@ -41,8 +42,13 @@ public class PlayerAttack : MonoBehaviour
         if (shootTimer > shootCooldown)
         {
             shootTimer = 0f;
+
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos.z = 0f;
+            Vector2 shootDirection = (mousePos - aim.position).normalized;
+
             GameObject instBullet = Instantiate(bullet, aim.position, aim.rotation);
-            instBullet.GetComponent<Rigidbody2D>().AddForce(-aim.up * fireForce, ForceMode2D.Impulse);
+            instBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * fireForce, ForceMode2D.Impulse);
             Destroy(instBullet, 7f);
         }
     }
