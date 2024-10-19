@@ -39,11 +39,11 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animacionController.SetTrigger("Attack");
+            animacionController.SetTrigger("AtackMelee");
             onAttack();
 
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             animacionController.SetTrigger("Attack");
             OnShoot(); 
