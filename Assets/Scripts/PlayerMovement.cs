@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 input;
     private Vector2 lastMoveDirection;
-
     public Transform aim;
     bool isWalking = false;
     public bool tocoPuerta = false;
@@ -17,9 +16,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator animacionController;
 
     public Health vida;
-
     public float spriteScaleX;
-    //[SerializeField] private AnimationClip animacionCaminar;
+
+    // Sistema de partículas de polvo
+    public ParticleSystem dustParticles;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,23 +29,27 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Guardar la �ltima direcci�n en la que se movi�
+        // Guardar la última dirección en la que se movió
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
         if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0) && !vida.gameOver)
         {
-            
             isWalking = false;
             lastMoveDirection = input;
             Vector3 vec3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
             aim.rotation = Quaternion.LookRotation(Vector3.forward, vec3);
 
-        } else if (moveX != 0 || moveY != 0 && !vida.gameOver)
+            // Detener las partículas cuando no esté caminando
+            StopDust();
+        }
+        else if ((moveX != 0 || moveY != 0) && !vida.gameOver)
         {
-            
             isWalking = true;
             animacionController.SetTrigger("Walking");
+
+            // Iniciar las partículas cuando esté caminando
+            CreateDust();
         }
 
         input.x = Input.GetAxis("Horizontal");
@@ -62,15 +67,32 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(!vida.gameOver)
+        if (!vida.gameOver)
         {
             rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
-            if (isWalking )
+            if (isWalking)
             {
-                
                 Vector3 vec3 = Vector3.left * input.x + Vector3.down * input.y;
                 aim.rotation = Quaternion.LookRotation(Vector3.forward, vec3);
             }
+        }
+    }
+
+    // Función para iniciar las partículas
+    void CreateDust()
+    {
+        if (!dustParticles.isPlaying)
+        {
+            dustParticles.Play(); // Iniciar el sistema de partículas si no está reproduciéndose
+        }
+    }
+
+    // Función para detener las partículas
+    void StopDust()
+    {
+        if (dustParticles.isPlaying)
+        {
+            dustParticles.Stop(); // Detener el sistema de partículas
         }
     }
 }

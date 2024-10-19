@@ -144,7 +144,7 @@ MonoBehaviour:
   aim: {fileID: 242706285356617224}
   tocoPuerta: 0
   vida: {fileID: 8468766208609744139}
-  spriteScaleX: 0
+  spriteScaleX: 5.63885
 --- !u!114 &1204201680049810364
 MonoBehaviour:
   m_ObjectHideFlags: 0
