@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2140560736317848700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.81, y: -0.9, z: -0.032383636}
+  m_LocalPosition: {x: -4.81, y: -0.9, z: 0}
   m_LocalScale: {x: 5.6388497, y: 5.6388497, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -127,6 +127,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 50
   inmortal: 0
+  gameOver: 0
 --- !u!114 &5327025766023798196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +143,8 @@ MonoBehaviour:
   speed: 5
   aim: {fileID: 242706285356617224}
   tocoPuerta: 0
+  vida: {fileID: 0}
+  spriteScaleX: 5.63885
 --- !u!114 &1204201680049810364
 MonoBehaviour:
   m_ObjectHideFlags: 0
