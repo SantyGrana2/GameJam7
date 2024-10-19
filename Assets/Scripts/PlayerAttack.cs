@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    SoundMananger soundMananger; 
     //Variables ataque corta distancia
     public GameObject meele;
     bool isAttacking = false;
@@ -13,7 +14,6 @@ public class PlayerAttack : MonoBehaviour
 
     public Health[] enemies;
 
-    [SerializeField]
     private int damage;
 
     //Variables ataque a larga distancia 
@@ -24,20 +24,27 @@ public class PlayerAttack : MonoBehaviour
     public float shootTimer;
     public int damageBullet;
 
-    private void Update()
+     private void Update()
     {
+       
+        soundMananger = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundMananger>();
         CheckMeeleTimer();
 
         shootTimer += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space))
+    
         {
+            soundMananger.PlaySFX(soundMananger.Sword);
             onAttack();
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
+            soundMananger.PlaySFX(soundMananger.Shot);
             OnShoot(); 
         }
+
+        
     }
 
     void OnShoot()
