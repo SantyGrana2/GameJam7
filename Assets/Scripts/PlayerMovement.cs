@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Animator animacionController;
 
     public Health vida;
+
+    public float spriteScaleX;
     //[SerializeField] private AnimationClip animacionCaminar;
     void Start()
     {
@@ -44,6 +46,15 @@ public class PlayerMovement : MonoBehaviour
 
         input.x = Input.GetAxis("Horizontal");
         input.y = Input.GetAxis("Vertical");
+
+        if (input.x > 0)  // Movimiento hacia la derecha
+        {
+            gameObject.transform.localScale = new Vector3(spriteScaleX, transform.localScale.y, transform.localScale.z);
+        }
+        else if (input.x < 0)  // Movimiento hacia la izquierda
+        {
+            gameObject.transform.localScale = new Vector3(-spriteScaleX, transform.localScale.y, transform.localScale.z);
+        }
     }
 
     void FixedUpdate()

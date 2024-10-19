@@ -11,6 +11,13 @@ public class AIEnemy : MonoBehaviour
     private float speed;
     private float distance;
 
+    private Animator animController;
+
+    private void Start()
+    {
+        animController = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if(!vida.gameOver)
@@ -20,6 +27,7 @@ public class AIEnemy : MonoBehaviour
             Vector2 direction = player.transform.position - transform.position;
 
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            animController.SetTrigger("Walking");
 
         }
 
