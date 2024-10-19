@@ -9,10 +9,6 @@ public class AIEnemy : MonoBehaviour
     [SerializeField]
     private float speed;
     private float distance;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -23,6 +19,7 @@ public class AIEnemy : MonoBehaviour
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
         // Con rotación
+
         //direction.Normalize();
         //float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         //transform.rotation = Quaternion.Euler(Vector3.forward * angle);
