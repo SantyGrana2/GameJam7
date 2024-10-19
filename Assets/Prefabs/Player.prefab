@@ -127,6 +127,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 50
   inmortal: 0
+  gameOver: 0
 --- !u!114 &5327025766023798196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,6 +143,8 @@ MonoBehaviour:
   speed: 5
   aim: {fileID: 242706285356617224}
   tocoPuerta: 0
+  vida: {fileID: 8468766208609744139}
+  spriteScaleX: 0
 --- !u!114 &1204201680049810364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +161,7 @@ MonoBehaviour:
   enemies: []
   damage: 2
   aim: {fileID: 242706285356617224}
-  bullet: {fileID: 7892916747898045248, guid: 01184c65697c0b24b9ff6a269fa47ed6, type: 3}
+  bullet: {fileID: 5836378519546781229, guid: 818cebefc8892da4daffd76f70385e5a, type: 3}
   fireForce: 10
   shootCooldown: 0.25
   shootTimer: 0.5

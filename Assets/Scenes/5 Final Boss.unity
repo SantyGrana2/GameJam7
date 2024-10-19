@@ -3356,9 +3356,9 @@ MonoBehaviour:
   - {fileID: 2139833239}
   - {fileID: 1085166052}
   - {fileID: 315174709}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 6616862524125295159}
+  - {fileID: 1306692424}
+  - {fileID: 1064792343}
   itemPrefab: {fileID: 3060261480194602000, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
 --- !u!4 &1971425610
 Transform:
@@ -7829,8 +7829,8 @@ MonoBehaviour:
   bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
   bulletPos: {fileID: 1509807896448892234}
   vida: {fileID: 9206298005478738148}
-  player: {fileID: 0}
-  spriteScaleX: 0
+  player: {fileID: 8488972249653680574}
+  spriteScaleX: 8
 --- !u!4 &7984297984488963746
 Transform:
   m_ObjectHideFlags: 0
