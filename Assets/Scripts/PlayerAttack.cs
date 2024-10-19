@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -87,5 +88,21 @@ public class PlayerAttack : MonoBehaviour
             Health enemyHealth = other.GetComponent<Health>();
             enemyHealth.TakeDamage(damage);
         }
+
+        if(other.CompareTag("PupShoot"))
+        {
+            fireForce = 20;
+            Destroy(other.gameObject);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(58,236f,17f);
+            StartCoroutine(ContadorPowerUpDisparo());
+        }
+
+    }
+
+    IEnumerator ContadorPowerUpDisparo()
+    {
+        yield return new WaitForSeconds(2); 
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,255f,255f);
+        
     }
 }

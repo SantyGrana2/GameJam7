@@ -6,6 +6,7 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+   
 
     private float timer;
 
