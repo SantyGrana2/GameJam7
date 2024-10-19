@@ -9,6 +9,7 @@ public class EnemyShooting : MonoBehaviour
 
     private float timer;
 
+    //El cooldown que tiene el enemigo para disparar
     private void Update()
     {
         timer += Time.deltaTime;
@@ -20,6 +21,7 @@ public class EnemyShooting : MonoBehaviour
         }
     }
 
+    //Lugar y prefab donde se instancian las balas
     void Shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);

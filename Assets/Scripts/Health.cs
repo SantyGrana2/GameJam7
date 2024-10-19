@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    //Código general para ajustar la vida y cuanto daño se le hace al gameObject
     public int health;
     public int maxHealth;
     [SerializeField] private bool inmortal;

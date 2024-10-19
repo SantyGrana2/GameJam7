@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    //Variables ataque corta distancia
     public GameObject meele;
     bool isAttacking = false;
     float atkDuration = 0.3f;
@@ -15,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     private int damage;
 
+    //Variables ataque a larga distancia 
     public Transform aim;
     public GameObject bullet;
     public float fireForce;
@@ -77,6 +79,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    //Cuando el objeto meele entra en contacto con un enemigo le quita vida
     private void OnTriggerEnter2D(Collider2D other)
     {
 

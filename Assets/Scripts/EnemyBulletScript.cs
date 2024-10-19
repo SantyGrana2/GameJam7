@@ -11,6 +11,7 @@ public class EnemyBulletScript : MonoBehaviour
     private float timer;
     public int damageBullet;
 
+    //Disparar hacia donde esta el jugador
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,6 +21,7 @@ public class EnemyBulletScript : MonoBehaviour
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
     }
 
+    //Validación para optimizar, que cuando pasen 7 segundos se destruyan las balas
     private void Update()
     {
         timer += Time.deltaTime;
@@ -30,6 +32,7 @@ public class EnemyBulletScript : MonoBehaviour
         }
     }
 
+    //Cuando la bala encuentre al jugador le quite vida
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
