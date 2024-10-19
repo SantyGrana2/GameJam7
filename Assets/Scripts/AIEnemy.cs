@@ -11,6 +11,15 @@ public class AIEnemy : MonoBehaviour
     private float speed;
     private float distance;
 
+    private Animator animController;
+
+    public float spriteScaleX;
+
+    private void Start()
+    {
+        animController = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if(!vida.gameOver)
@@ -20,6 +29,16 @@ public class AIEnemy : MonoBehaviour
             Vector2 direction = player.transform.position - transform.position;
 
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            animController.SetTrigger("Walking");
+
+            if (direction.x > 0)  // Si el jugador está a la derecha
+            {
+                transform.localScale = new Vector3(spriteScaleX, transform.localScale.y, transform.localScale.z);
+            }
+            else if (direction.x < 0)  // Si el jugador está a la izquierda
+            {
+                transform.localScale = new Vector3(-spriteScaleX, transform.localScale.y, transform.localScale.z);
+            }
 
         }
 

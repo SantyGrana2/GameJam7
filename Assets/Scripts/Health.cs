@@ -23,14 +23,19 @@ public class Health : MonoBehaviour
             if(gameObject.CompareTag("Player") || gameObject.CompareTag("Enemy"))
             {
                 animacionController.SetTrigger("Damage");
+
+            } else if (gameObject.CompareTag("Enemy"))
+            {
+                animacionController.SetTrigger("Hurt");
             }
 
             health -= amount;
             if (health <= 0)
             {
-                if(!gameObject.CompareTag("Player"))
+                if(gameObject.CompareTag("Enemy"))
                 {
                     Destroy(gameObject);
+                    animacionController.SetBool("Death", true);
                 }
                 
                 
