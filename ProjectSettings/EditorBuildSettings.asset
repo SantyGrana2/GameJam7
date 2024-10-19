@@ -14,7 +14,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Credits.unity
     guid: f28cfeb33394f3b4b8e6ae253d2142e5
-  - enabled: 0
-    path: Assets/Scenes/Level 1.unity
+  - enabled: 1
+    path: Assets/Scenes/1 Escena.unity
     guid: 9811b8d586100bb4bac7e3e76fc7a1e1
+  - enabled: 1
+    path: Assets/Scenes/2 Escena.unity
+    guid: 982588d95ac307b43a3fd37cca36d772
+  - enabled: 1
+    path: Assets/Scenes/3 Escena.unity
+    guid: 02f74fc088fc9c14da742162fffb43eb
+  - enabled: 1
+    path: Assets/Scenes/4 Escena.unity
+    guid: 1949e65a6f5e58a4c9693013a8ec375e
+  - enabled: 1
+    path: Assets/Scenes/5 Final Boss.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
