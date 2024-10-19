@@ -187,6 +187,10 @@ PrefabInstance:
       value: 111557959
       objectReference: {fileID: 0}
     - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
+    - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1671587316}
@@ -243,6 +247,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2574602047277073658, guid: 90da19aa1b4f9ab4ca7d451f8cffac63, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
     - target: {fileID: 4690294475050063436, guid: 90da19aa1b4f9ab4ca7d451f8cffac63, type: 3}
       propertyPath: m_Name
       value: EnemyDistance (1)
@@ -324,6 +332,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 111557959
       objectReference: {fileID: 0}
+    - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
     - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
       propertyPath: player
       value: 
@@ -601,6 +613,10 @@ PrefabInstance:
       value: 111557959
       objectReference: {fileID: 0}
     - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
+    - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1671587316}
@@ -714,6 +730,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2574602047277073658, guid: 90da19aa1b4f9ab4ca7d451f8cffac63, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
     - target: {fileID: 4690294475050063436, guid: 90da19aa1b4f9ab4ca7d451f8cffac63, type: 3}
       propertyPath: m_Name
       value: EnemyDistance
@@ -1128,6 +1148,10 @@ PrefabInstance:
       value: 111557959
       objectReference: {fileID: 0}
     - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
+    - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1671587316}
@@ -1226,6 +1250,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 111557959
       objectReference: {fileID: 0}
+    - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
     - target: {fileID: 6903808762785650926, guid: 914086a2bd50ee14596903de9153175b, type: 3}
       propertyPath: player
       value: 
@@ -1483,6 +1511,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5327025766023798196, guid: e9d42155de3e4e9419fd30b79c6e4ef9, type: 3}
+      propertyPath: vida
+      value: 
+      objectReference: {fileID: 1671587319}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
