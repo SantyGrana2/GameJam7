@@ -12,6 +12,7 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject itemPrefab; // Prefab del ítem que aparecerá
     private bool itemSpawned = false;
      private BulletScript damagebullet;
+    private Health vida;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class SpawnEnemies : MonoBehaviour
     void FixedUpdate()
     {
        // Verifica si la salud del jefe está por debajo de la mitad
-        if (healthBoss.health <= healthBoss.maxHealth / 2 && !isSpawningActive)
+        if (healthBoss.health <= healthBoss.maxHealth / 2 && !isSpawningActive && !vida.gameOver)
         {
             // Inicia la invocación repetida si no ha comenzado ya
             if (currentIndex == 0) // Esto asegura que no se inicie varias veces

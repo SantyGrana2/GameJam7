@@ -23,7 +23,14 @@ public class PlayerAttack : MonoBehaviour
     public float shootCooldown;
     public float shootTimer;
     public int damageBullet;
+    private Animator animacionController;
 
+    
+    void Start()
+    {
+        animacionController = GetComponent<Animator>();
+        
+    }
     private void Update()
     {
         CheckMeeleTimer();
@@ -32,10 +39,13 @@ public class PlayerAttack : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animacionController.SetTrigger("Attack");
             onAttack();
+
         }
         if (Input.GetMouseButton(0))
         {
+            animacionController.SetTrigger("Attack");
             OnShoot(); 
         }
     }
@@ -97,6 +107,11 @@ public class PlayerAttack : MonoBehaviour
             StartCoroutine(ContadorPowerUpDisparo());
         }
 
+    }
+
+    void Damage()
+    {
+        animacionController.SetTrigger("Damage");
     }
 
     IEnumerator ContadorPowerUpDisparo()
