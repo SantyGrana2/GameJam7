@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8960475281203478172}
   - component: {fileID: 608632986943394500}
   m_Layer: 0
-  m_Name: PowerUpshoot
+  m_Name: PowerUpShoot
   m_TagString: PupShoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
