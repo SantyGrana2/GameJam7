@@ -11,6 +11,7 @@ public class SpawnEnemies : MonoBehaviour
     private bool isSpawningActive = false; 
     public GameObject itemPrefab; // Prefab del ítem que aparecerá
     private bool itemSpawned = false;
+     private BulletScript damagebullet;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +32,7 @@ public class SpawnEnemies : MonoBehaviour
                 InvokeRepeating("ActivateNextGameObject", 2f, 5f); 
                 isSpawningActive = true;// Empieza después de 2 segundos y repite cada 5 segundos
             }
+            damagebullet.damageBullet =  4;
         }
 
         if (healthBoss.health <= 0)
