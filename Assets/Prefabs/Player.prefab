@@ -368,7 +368,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meele: {fileID: 373086907092908762}
-  enemy: {fileID: 0}
+  enemies:
+  - {fileID: 4138054660537648179, guid: 914086a2bd50ee14596903de9153175b, type: 3}
+  - {fileID: 4138054660537648179, guid: 90da19aa1b4f9ab4ca7d451f8cffac63, type: 3}
+  - {fileID: 6252368984374458839, guid: 4d1c90b3c7b68a5428c908d3709fb31f, type: 3}
   damage: 2
   aim: {fileID: 252905737476906409}
   bullet: {fileID: 7892916747898045248, guid: 01184c65697c0b24b9ff6a269fa47ed6, type: 3}
