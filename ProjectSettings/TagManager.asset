@@ -4,13 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-<<<<<<< HEAD
-  - Puerta
+  - PupShoot
   - PuLife
-=======
-  - Bullet
->>>>>>> Santy
+  - Enemy
+  - PuPlus
   layers:
   - Default
   - TransparentFX

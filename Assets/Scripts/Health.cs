@@ -14,13 +14,13 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if(inmortal == true)
+        if(inmortal == false)
         {
             health -= amount;
             if (health <= 0)
             {
                 Destroy(gameObject);
-            }
+            } 
         }
     }
 
@@ -28,8 +28,21 @@ public class Health : MonoBehaviour
         if(other.CompareTag("PuLife"))
         {
             inmortal = true;
+            Destroy(other.gameObject);
             gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,250f,0f);
             StartCoroutine(ContadorPowerUp());
+        }
+
+        if(other.CompareTag("PuPlus"))
+        {
+            health += 30;
+            if(health >=50)
+            {
+                health = 50;
+            }
+            Destroy(other.gameObject);
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,0f,0f);
+            StartCoroutine(ContadorPowerUpVida());
         }
     }
 
@@ -37,6 +50,13 @@ public class Health : MonoBehaviour
     {
         yield return new WaitForSeconds(10); 
         inmortal = false;
+        gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,255f,255f);
+        
+    }
+
+    IEnumerator ContadorPowerUpVida()
+    {
+        yield return new WaitForSeconds(2); 
         gameObject.GetComponent<SpriteRenderer>().color = new Color(255f,255f,255f);
         
     }
