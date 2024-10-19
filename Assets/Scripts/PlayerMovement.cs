@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    SoundMananger soundMananger;
     public float speed = 5f;
     private Rigidbody2D rb;
     private Vector2 input;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0) && !vida.gameOver)
         {
+            
             isWalking = false;
             lastMoveDirection = input;
             Vector3 vec3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
@@ -40,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         } else if (moveX != 0 || moveY != 0 && !vida.gameOver)
         {
+            
             isWalking = true;
             animacionController.SetTrigger("Walking");
         }

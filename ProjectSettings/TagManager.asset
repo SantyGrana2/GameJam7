@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PuPlus
   - Bullet
+  - Sound
   layers:
   - Default
   - TransparentFX
