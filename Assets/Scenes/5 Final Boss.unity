@@ -482,8 +482,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -498445656, guid: 72ddff9fe60455d4b8ac671fa33f1caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -689,7 +689,8 @@ PrefabInstance:
       value: Escena Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7328346888952211730, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
@@ -1012,8 +1013,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -498445656, guid: 72ddff9fe60455d4b8ac671fa33f1caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2207,8 +2208,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 549038542, guid: 8ac74a0d32fc7364e8c0f54f4176c640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2429,8 +2430,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -498445656, guid: 72ddff9fe60455d4b8ac671fa33f1caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2895,8 +2896,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 549038542, guid: 8ac74a0d32fc7364e8c0f54f4176c640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3353,13 +3354,13 @@ MonoBehaviour:
   gameObjectsToActivate:
   - {fileID: 6717163205344532597}
   - {fileID: 474765162}
-  - {fileID: 2139833239}
-  - {fileID: 1085166052}
-  - {fileID: 315174709}
   - {fileID: 6616862524125295159}
+  - {fileID: 2139833239}
   - {fileID: 1306692424}
+  - {fileID: 1085166052}
   - {fileID: 1064792343}
-  itemPrefab: {fileID: 3060261480194602000, guid: a1fa6fe45d7fb1342b5c112dac03f533, type: 3}
+  - {fileID: 315174709}
+  itemPrefab: {fileID: 1860665846702590965, guid: 837fc96b05627974fa338024bf7d9e1a, type: 3}
 --- !u!4 &1971425610
 Transform:
   m_ObjectHideFlags: 0
@@ -3695,8 +3696,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -498445656, guid: 72ddff9fe60455d4b8ac671fa33f1caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5739,8 +5740,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: -498445656, guid: 72ddff9fe60455d4b8ac671fa33f1caa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6130,8 +6131,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 111557959
+  m_SortingLayer: 2
   m_SortingOrder: 3
   m_Sprite: {fileID: 549038542, guid: 8ac74a0d32fc7364e8c0f54f4176c640, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7667,7 +7668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &7458278879441355049
 BoxCollider2D:
   m_ObjectHideFlags: 0
