@@ -10,6 +10,8 @@ TagManager:
   - PuPlus
   - Bullet
   - Sound
+  - Text
+  - PowerupText
   layers:
   - Default
   - TransparentFX
