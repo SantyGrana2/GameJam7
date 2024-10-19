@@ -7,9 +7,13 @@ public class EnemyShooting : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
     public Health vida;
-   
-
+    private Animator animatorController;
     private float timer;
+
+    void Start()
+    {
+        animatorController = GetComponent<Animator>();
+    }
 
     //El cooldown que tiene el enemigo para disparar
     private void Update()
@@ -27,5 +31,6 @@ public class EnemyShooting : MonoBehaviour
     void Shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
+        animatorController.SetTrigger("Dispara");
     }
 }

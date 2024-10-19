@@ -20,10 +20,11 @@ public class Health : MonoBehaviour
     {
         if(inmortal == false)
         {
-            if(gameObject.CompareTag("Player"))
+            if(gameObject.CompareTag("Player") || gameObject.CompareTag("Enemy"))
             {
                 animacionController.SetTrigger("Damage");
             }
+
             health -= amount;
             if (health <= 0)
             {

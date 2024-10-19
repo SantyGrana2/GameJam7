@@ -38,8 +38,8 @@ public class MoverEscena : MonoBehaviour
     
     void MoverPuertas()
     {
-        GameObject enemy1 = GameObject.Find("EnemyMeele");
-        GameObject enemy2 = GameObject.Find("EnemyMeele (1)");
+        GameObject enemy1 = GameObject.Find("EnemyMele");
+        GameObject enemy2 = GameObject.Find("EnemyMele (1)");
 
         if(enemy1 == null && enemy2 == null && puerta1 != null)
         {
@@ -50,8 +50,8 @@ public class MoverEscena : MonoBehaviour
             }
         }
 
-        GameObject enemy3 = GameObject.Find("EnemyMeele (2)");
-        GameObject enemy4 = GameObject.Find("EnemyMeele (3)");
+        GameObject enemy3 = GameObject.Find("EnemyMele (2)");
+        GameObject enemy4 = GameObject.Find("EnemyMele (3)");
 
         if(enemy3 == null && enemy4 == null && puerta2 != null)
         {
