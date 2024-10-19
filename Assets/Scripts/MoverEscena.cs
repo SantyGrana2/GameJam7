@@ -10,6 +10,7 @@ public class MoverEscena : MonoBehaviour
     
     public bool tocoPuerta;
     public GameObject puerta1,puerta2;
+    
    // public GameObject puerta;
 
     // Start is called before the first frame update

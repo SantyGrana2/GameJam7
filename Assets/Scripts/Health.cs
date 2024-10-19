@@ -4,23 +4,41 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    //Código general para ajustar la vida y cuanto daño se le hace al gameObject
+    //Cï¿½digo general para ajustar la vida y cuanto daï¿½o se le hace al gameObject
     public int health;
     public int maxHealth;
     [SerializeField] private bool inmortal;
+    private Animator animacionController;
+    public bool gameOver = false;
     void Start()
     {
         health = maxHealth; 
+        animacionController = GetComponent<Animator>();
     }
 
     public void TakeDamage(int amount)
     {
         if(inmortal == false)
         {
+            if(gameObject.CompareTag("Player"))
+            {
+                animacionController.SetTrigger("Damage");
+            }
             health -= amount;
             if (health <= 0)
             {
-                Destroy(gameObject);
+                if(!gameObject.CompareTag("Player"))
+                {
+                    Destroy(gameObject);
+                }
+                
+                
+                if(gameObject.CompareTag("Player"))
+                {
+                animacionController.SetTrigger("Muerte");
+                animacionController.SetBool("Muerto",true);
+                gameOver = true;
+                }
             } 
         }
     }

@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 25
+  inmortal: 0
+  gameOver: 0
 --- !u!61 &940515174261830303
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -192,3 +194,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
   bulletPos: {fileID: 5506112185025308927}
+  vida: {fileID: 8468766208609744139, guid: e9d42155de3e4e9419fd30b79c6e4ef9, type: 3}

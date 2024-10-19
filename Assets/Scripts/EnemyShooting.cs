@@ -6,6 +6,7 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+    public Health vida;
    
 
     private float timer;
@@ -15,7 +16,7 @@ public class EnemyShooting : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 2)
+        if (timer > 2 && !vida.gameOver)
         {
             timer = 0;
             Shoot();

@@ -132,7 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106dc340d013b0469510723d9635b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 860573568967724996, guid: 282b89dff2363fc4a942c1beae1152cf, type: 3}
+  vida: {fileID: 8468766208609744139, guid: e9d42155de3e4e9419fd30b79c6e4ef9, type: 3}
+  player: {fileID: 2140560736317848700, guid: e9d42155de3e4e9419fd30b79c6e4ef9, type: 3}
   speed: 1.25
 --- !u!114 &4138054660537648179
 MonoBehaviour:
@@ -149,6 +150,7 @@ MonoBehaviour:
   health: 0
   maxHealth: 25
   inmortal: 0
+  gameOver: 0
 --- !u!114 &3683499368513897357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8b3beea6d70bf47913f49090eeebb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 4615594523489049848, guid: 282b89dff2363fc4a942c1beae1152cf, type: 3}
+  playerHealth: {fileID: 8468766208609744139, guid: e9d42155de3e4e9419fd30b79c6e4ef9, type: 3}
   damage: 2
 --- !u!61 &940515174261830303
 BoxCollider2D:

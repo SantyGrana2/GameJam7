@@ -13,9 +13,14 @@ public class PlayerMovement : MonoBehaviour
     bool isWalking = false;
     public bool tocoPuerta = false;
 
+    private Animator animacionController;
+
+    public Health vida;
+    //[SerializeField] private AnimationClip animacionCaminar;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animacionController = GetComponent<Animator>();
     }
 
     void Update()
@@ -24,16 +29,17 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0))
+        if ((moveX == 0 && moveY == 0) && (input.x != 0 || input.y != 0) && !vida.gameOver)
         {
             isWalking = false;
             lastMoveDirection = input;
             Vector3 vec3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
             aim.rotation = Quaternion.LookRotation(Vector3.forward, vec3);
 
-        } else if (moveX != 0 || moveY != 0)
+        } else if (moveX != 0 || moveY != 0 && !vida.gameOver)
         {
             isWalking = true;
+            animacionController.SetTrigger("Walking");
         }
 
         input.x = Input.GetAxis("Horizontal");
@@ -42,11 +48,15 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
-        if (isWalking)
+        if(!vida.gameOver)
         {
-            Vector3 vec3 = Vector3.left * input.x + Vector3.down * input.y;
-            aim.rotation = Quaternion.LookRotation(Vector3.forward, vec3);
+            rb.MovePosition(rb.position + input * speed * Time.fixedDeltaTime);
+            if (isWalking )
+            {
+                
+                Vector3 vec3 = Vector3.left * input.x + Vector3.down * input.y;
+                aim.rotation = Quaternion.LookRotation(Vector3.forward, vec3);
+            }
         }
     }
 }
