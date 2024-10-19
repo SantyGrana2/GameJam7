@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 2140560736317848700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.81, y: -0.9, z: -0.032383636}
+  m_LocalPosition: {x: -4.81, y: -0.9, z: 0}
   m_LocalScale: {x: 5.6388497, y: 5.6388497, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -143,7 +143,7 @@ MonoBehaviour:
   speed: 5
   aim: {fileID: 242706285356617224}
   tocoPuerta: 0
-  vida: {fileID: 8468766208609744139}
+  vida: {fileID: 0}
   spriteScaleX: 5.63885
 --- !u!114 &1204201680049810364
 MonoBehaviour:
@@ -161,7 +161,7 @@ MonoBehaviour:
   enemies: []
   damage: 2
   aim: {fileID: 242706285356617224}
-  bullet: {fileID: 5836378519546781229, guid: 818cebefc8892da4daffd76f70385e5a, type: 3}
+  bullet: {fileID: 7892916747898045248, guid: 01184c65697c0b24b9ff6a269fa47ed6, type: 3}
   fireForce: 10
   shootCooldown: 0.25
   shootTimer: 0.5
