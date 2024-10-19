@@ -9,6 +9,7 @@ public class EnemyMeeleAttack : MonoBehaviour
     [SerializeField]
     private int damage;
 
+    //Cuando el enemigo haga una colisión con el jugador quitarle vida
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
