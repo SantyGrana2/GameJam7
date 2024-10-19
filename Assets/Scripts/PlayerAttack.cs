@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    SoundMananger soundMananger;
+
     //Variables ataque corta distancia
     public GameObject meele;
     bool isAttacking = false;
@@ -33,18 +35,22 @@ public class PlayerAttack : MonoBehaviour
     }
     private void Update()
     {
+        soundMananger = GameObject.FindGameObjectWithTag("Sound").GetComponent<SoundMananger>();
+
         CheckMeeleTimer();
 
         shootTimer += Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            soundMananger.PlaySFX(soundMananger.Sword);
             animacionController.SetTrigger("AtackMelee");
             onAttack();
 
         }
         if (Input.GetMouseButtonDown(0))
         {
+            soundMananger.PlaySFX(soundMananger.Shot);
             animacionController.SetTrigger("Attack");
             OnShoot(); 
         }
