@@ -10,7 +10,10 @@ public class Health : MonoBehaviour
     [SerializeField] private bool inmortal;
     private Animator animacionController;
     public bool gameOver = false;
+    public GameOver endGame;
+    private bool isDead;
     [SerializeField] private BarraDeVida barraDeVida;
+
     void Start()
     {
         health = maxHealth; 
@@ -40,9 +43,11 @@ public class Health : MonoBehaviour
                 
                 if(gameObject.CompareTag("Player"))
                 {
-                animacionController.SetTrigger("Muerte");
-                animacionController.SetBool("Muerto",true);
-                gameOver = true;
+                    animacionController.SetTrigger("Muerte");
+                    animacionController.SetBool("Muerto",true);
+                    gameOver = true;
+                    isDead = true;
+                    endGame.End();
                 }
 
             } 
