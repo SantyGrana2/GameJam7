@@ -31,7 +31,6 @@ public class Health : MonoBehaviour
 
             }
             health -= amount;
-            barraDeVida.CambiatVidaActual(health);
             if (health <= 0)
             {
                 if(gameObject.CompareTag("Enemy"))
@@ -52,6 +51,7 @@ public class Health : MonoBehaviour
 
             } 
         }
+        barraDeVida.CambiatVidaActual(health);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
