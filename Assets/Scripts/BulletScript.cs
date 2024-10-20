@@ -11,13 +11,9 @@ public class BulletScript : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Health enemyHealth = other.GetComponent<Health>();
-            if (enemyHealth != null)
-            {
-                enemyHealth.TakeDamage(damageBullet);
-            }
-
             Destroy(gameObject);
+            Health enemyHealth = other.GetComponent<Health>();
+            enemyHealth.TakeDamage(damageBullet);
         }
     }
 }
