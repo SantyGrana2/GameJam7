@@ -10,8 +10,6 @@ TagManager:
   - PuPlus
   - Bullet
   - Sound
-  - Text
-  - PowerupText
   layers:
   - Default
   - TransparentFX
@@ -61,6 +59,6 @@ TagManager:
   - name: Map
     uniqueID: 2976474149
     locked: 0
-  - name: Particles
-    uniqueID: 3735303223
+  - name: Canvas
+    uniqueID: 3160228351
     locked: 0
