@@ -16,9 +16,12 @@ public class Health : MonoBehaviour
 
     void Start()
     {
-        health = maxHealth; 
+        health = maxHealth;
         animacionController = GetComponent<Animator>();
-        barraDeVida.IniciarBarraDeVida(health);
+        if (barraDeVida != null) // Asegúrate de que barraDeVida esté asignado
+        {
+            barraDeVida.IniciarBarraDeVida(health);
+        }
     }
 
     public void TakeDamage(int amount)
@@ -50,6 +53,7 @@ public class Health : MonoBehaviour
                 }
             } 
         }
+        
         barraDeVida.CambiatVidaActual(health);
     }
 
@@ -75,7 +79,7 @@ public class Health : MonoBehaviour
         }
     }
 
-      IEnumerator ContadorPowerUp()
+    IEnumerator ContadorPowerUp()
     {
         yield return new WaitForSeconds(10); 
         inmortal = false;

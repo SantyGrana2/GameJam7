@@ -5103,9 +5103,17 @@ PrefabInstance:
       propertyPath: siguienteEscena
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4361278873868777226, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6191212658329089249, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6191212658329089249, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

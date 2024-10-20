@@ -23,25 +23,48 @@ public class TransicionEscena : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        try
-        {
-            if(puerta.tocoPuerta)
-        {
-            StartCoroutine(CambiarEscena());
-        }
-        }
-        catch (System.Exception)
-        {
-            // Código para manejar la excepción
-            Debug.LogError("Nivel final");
-        }
-
-         if(bossDie.bossIsDie && GameObject.Find("Boss") == null)
-        {
-            Debug.Log("Se ejecuto el boss");
-            StartCoroutine(CambiarEscena());
-        }
+            if (puerta == null)
+    {
+        puerta = FindObjectOfType<MoverEscena>();
     }
+
+    if (puerta != null && puerta.tocoPuerta)
+    {
+        StartCoroutine(CambiarEscena());
+    }
+
+    if (bossDie == null)
+    {
+        bossDie = FindObjectOfType<SpawnEnemies>();
+    }
+
+    if (bossDie != null && bossDie.bossIsDie && GameObject.Find("Boss") == null)
+    {
+        Debug.Log("Se ejecutó el boss");
+        StartCoroutine(CambiarEscena());
+    }
+
+    }
+//    {
+//        try
+//        {
+//            if(puerta.tocoPuerta)
+//        {
+//            StartCoroutine(CambiarEscena());
+//        }
+//        }
+//        catch (System.Exception)
+//        {
+//            // Código para manejar la excepción
+//            Debug.LogError("Nivel final");
+//        }
+//
+//         if(bossDie.bossIsDie && GameObject.Find("Boss") == null)
+//        {
+//            Debug.Log("Se ejecuto el boss");
+//            StartCoroutine(CambiarEscena());
+//        }
+//    }
 
     IEnumerator CambiarEscena()
     {
