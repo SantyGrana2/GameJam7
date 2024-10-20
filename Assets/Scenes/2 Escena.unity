@@ -12827,7 +12827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e3ddef000cf0543ab6080e1b1ac4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: 4
+  siguienteEscena: 3
   animacionFinal: {fileID: 7400000, guid: b1d6a8954d2b95f4396e28d31172068d, type: 2}
 --- !u!95 &2082812453
 Animator:
