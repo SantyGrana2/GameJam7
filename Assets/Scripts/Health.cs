@@ -10,6 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] private bool inmortal;
     private Animator animacionController;
     public bool gameOver = false;
+    public GameOver endGame;
+    private bool isDead;
     void Start()
     {
         health = maxHealth; 
@@ -32,6 +34,8 @@ public class Health : MonoBehaviour
             health -= amount;
             if (health <= 0)
             {
+                
+                
                 if(gameObject.CompareTag("Enemy"))
                 {
                     Destroy(gameObject);
@@ -44,6 +48,8 @@ public class Health : MonoBehaviour
                 animacionController.SetTrigger("Muerte");
                 animacionController.SetBool("Muerto",true);
                 gameOver = true;
+                isDead = true;
+                endGame.End();
                 }
             } 
         }
