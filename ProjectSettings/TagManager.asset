@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PupShoot
+  - PuLife
+  - Enemy
+  - PuPlus
+  - Bullet
+  - Sound
   layers:
   - Default
   - TransparentFX
@@ -40,4 +46,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Power Ups
+    uniqueID: 4255382055
+    locked: 0
+  - name: Player
+    uniqueID: 111557959
+    locked: 0
+  - name: Door
+    uniqueID: 1276891433
+    locked: 0
+  - name: Map
+    uniqueID: 2976474149
+    locked: 0
+  - name: Canvas
+    uniqueID: 3160228351
     locked: 0
