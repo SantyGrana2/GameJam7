@@ -545,6 +545,7 @@ GameObject:
   - component: {fileID: 1035028120}
   - component: {fileID: 1035028119}
   - component: {fileID: 1035028118}
+  - component: {fileID: 1035028121}
   m_Layer: 5
   m_Name: Creditos
   m_TagString: Untagged
@@ -568,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000027657, y: -1951}
+  m_AnchoredPosition: {x: -0.000027657, y: -1767}
   m_SizeDelta: {x: 1276.2759, y: 1770.6301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1035028118
@@ -691,6 +692,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035028116}
   m_CullTransparentMesh: 1
+--- !u!114 &1035028121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035028116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75f8cdd88f402744b8f7668d2b5ac06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  siguienteEscena: 0
 --- !u!1 &1057223199
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,8 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e3ddef000cf0543ab6080e1b1ac4e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  siguienteEscena: 5
+  siguienteEscena: 0
   animacionFinal: {fileID: 7400000, guid: b1d6a8954d2b95f4396e28d31172068d, type: 2}
+  bossDie: {fileID: 0}
 --- !u!95 &1057223201
 Animator:
   serializedVersion: 5

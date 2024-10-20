@@ -10,11 +10,14 @@ public class TransicionEscena : MonoBehaviour
     public int siguienteEscena;
     private MoverEscena puerta;
     [SerializeField] private AnimationClip animacionFinal;
+    public SpawnEnemies bossDie;
     // Start is called before the first frame update
     void Start()
     {
          animator = GetComponent<Animator>();
          puerta = FindObjectOfType<MoverEscena>();
+         bossDie = FindObjectOfType<SpawnEnemies>();
+
     }
 
     // Update is called once per frame
@@ -33,7 +36,11 @@ public class TransicionEscena : MonoBehaviour
             Debug.LogError("Nivel final");
         }
 
-        
+         if(bossDie.bossIsDie && GameObject.Find("Boss") == null)
+        {
+            Debug.Log("Se ejecuto el boss");
+            StartCoroutine(CambiarEscena());
+        }
     }
 
     IEnumerator CambiarEscena()
