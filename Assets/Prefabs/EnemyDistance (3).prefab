@@ -153,9 +153,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c55bdcbe80f9c4384524c5b89f63c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
+  bullet: {fileID: 5176250936428081890, guid: f8783f119c4d7e64687289bfe633cc50, type: 3}
   bulletPos: {fileID: 4881684690502417003}
   vida: {fileID: 0}
+  player: {fileID: 0}
+  spriteScaleX: 0
 --- !u!61 &1300771352438045770
 BoxCollider2D:
   m_ObjectHideFlags: 0

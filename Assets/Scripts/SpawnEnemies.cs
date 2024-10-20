@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
@@ -9,11 +10,9 @@ public class SpawnEnemies : MonoBehaviour
      public GameObject[] gameObjectsToActivate; // Array de GameObjects para activar
     private int currentIndex = 0;   
     private bool isSpawningActive = false; 
-    public GameObject itemPrefab; // Prefab del ítem que aparecerá
+    public GameObject itemPrefab, itemInmo; // Prefab del ítem que aparecerá
     private bool itemSpawned = false;
-     private BulletScript damagebullet;
-    private Health vida;
-
+    private bool itemSpawnedInmo = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,39 +23,49 @@ public class SpawnEnemies : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-       // Verifica si la salud del jefe está por debajo de la mitad
-        if (healthBoss.health <= healthBoss.maxHealth / 2 && !isSpawningActive && !vida.gameOver)
+        if(!healthPlayer.gameOver)
         {
-            // Inicia la invocación repetida si no ha comenzado ya
-            if (currentIndex == 0) // Esto asegura que no se inicie varias veces
-            {
-                InvokeRepeating("ActivateNextGameObject", 2f, 5f); 
-                isSpawningActive = true;// Empieza después de 2 segundos y repite cada 5 segundos
-            }
-            damagebullet.damageBullet =  4;
-        }
 
-        if (healthBoss.health <= 0)
-        {
-            // Detener la invocación si está activa
-            CancelInvoke("ActivateNextGameObject");
-            isSpawningActive = false; // Cambia el estado para evitar múltiples invocaciones
-            
-            // Desactivar todos los GameObjects
-            foreach (GameObject obj in gameObjectsToActivate)
+        // Verifica si la salud del jefe está por debajo de la mitad
+            if (healthBoss.health <= healthBoss.maxHealth / 2 && !isSpawningActive)
             {
-                obj.SetActive(false);
+                // Inicia la invocación repetida si no ha comenzado ya
+                if (currentIndex == 0) // Esto asegura que no se inicie varias veces
+                {
+                    InvokeRepeating("ActivateNextGameObject", 2f, 5f); 
+                    isSpawningActive = true;// Empieza después de 2 segundos y repite cada 5 segundos
+                }
             }
-        }
 
-        if(healthPlayer.health <= healthPlayer.maxHealth/2 && !itemSpawned)
-        {
-            // Instancia el ítem en la posición del jugador
-            Instantiate(itemPrefab, transform.position, Quaternion.identity);
-            itemSpawned = true;
-        } else if(healthPlayer.health == healthPlayer.maxHealth)
-        {
-            itemSpawned = false;
+            if (healthBoss.health <= 0)
+            {
+                // Detener la invocación si está activa
+                CancelInvoke("ActivateNextGameObject");
+                isSpawningActive = false; // Cambia el estado para evitar múltiples invocaciones
+                
+                // Desactivar todos los GameObjects
+                foreach (GameObject obj in gameObjectsToActivate)
+                {
+                    obj.SetActive(false);
+                }
+            }
+
+            if(healthPlayer.health <= healthPlayer.maxHealth/2 && !itemSpawned)
+            {
+                // Instancia el ítem en la posición del jugador
+                Instantiate(itemPrefab, Vector2.zero, Quaternion.identity);
+                itemSpawned = true;
+            } else if(healthPlayer.health >= healthPlayer.maxHealth/2)
+            {
+                itemSpawned = false;
+            }
+
+            if(healthPlayer.health <= 12 && !itemSpawnedInmo)
+            {
+                // Instancia el ítem en la posición del jugador
+                Instantiate(itemInmo, new Vector2(-3f,0f), Quaternion.identity);
+                itemSpawnedInmo = true;
+            } 
         }
     }
 

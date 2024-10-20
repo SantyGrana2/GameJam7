@@ -67,7 +67,19 @@ public class PlayerAttack : MonoBehaviour
             Vector2 shootDirection = (mousePos - aim.position).normalized;
 
             GameObject instBullet = Instantiate(bullet, aim.position, aim.rotation);
-            instBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * fireForce, ForceMode2D.Impulse);
+
+             // Encuentra el GameObject "punta" dentro de la flecha instanciada
+            Transform punta = instBullet.transform.Find("punta");
+
+            if (punta != null)
+            {
+                // Calcula la rotación para que la punta apunte hacia la dirección del disparo
+                float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+                instBullet.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+                // Aplica la fuerza desde la dirección de la punta
+                instBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * fireForce, ForceMode2D.Impulse);
+            }
             Destroy(instBullet, 7f);
         }
     }
