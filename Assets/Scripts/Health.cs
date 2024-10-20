@@ -10,10 +10,12 @@ public class Health : MonoBehaviour
     [SerializeField] private bool inmortal;
     private Animator animacionController;
     public bool gameOver = false;
+    [SerializeField] private BarraDeVida barraDeVida;
     void Start()
     {
         health = maxHealth; 
         animacionController = GetComponent<Animator>();
+        barraDeVida.IniciarBarraDeVida(health);
     }
 
     public void TakeDamage(int amount)
@@ -26,6 +28,7 @@ public class Health : MonoBehaviour
 
             }
             health -= amount;
+            barraDeVida.CambiatVidaActual(health);
             if (health <= 0)
             {
                 if(gameObject.CompareTag("Enemy"))
@@ -41,6 +44,7 @@ public class Health : MonoBehaviour
                 animacionController.SetBool("Muerto",true);
                 gameOver = true;
                 }
+
             } 
         }
     }
