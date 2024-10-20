@@ -569,7 +569,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000027657, y: -1767}
+  m_AnchoredPosition: {x: -0.000027657, y: -624}
   m_SizeDelta: {x: 1276.2759, y: 1770.6301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1035028118
@@ -613,9 +613,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1GRACIAS POR JUGAR!\n\n\n\n\n\ndevelopers\n\nJaider Zapata\nSantiago
-    Granados\n\n\n\ndesigners\n\nJorge G\xF3mez\nAnamar\xEDa Soriano\n\n\n\nGame
-    Jam 1\n\nGeneration Colombia\n\n\n2024"
+  m_text: "\xA1GRACIAS POR JUGAR!\n\n\n\ndevelopers\n\nJaider Zapata\nSantiago Granados\n\n\ndesigners\n\nJorge
+    G\xF3mez\nAnamar\xEDa Soriano\n\n\nGame Jam 1\n\nGeneration Colombia\n\n2024"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65c0f73ba96927442a67850e005bc889, type: 2}
   m_sharedMaterial: {fileID: -6856356436764295945, guid: 65c0f73ba96927442a67850e005bc889, type: 2}
@@ -642,8 +641,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 56.98
+  m_fontSizeBase: 56.98
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -678,7 +677,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -511.91345, z: 0, w: 0}
+  m_margin: {x: 0, y: 497.66962, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
