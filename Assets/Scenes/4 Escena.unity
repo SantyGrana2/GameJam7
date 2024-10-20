@@ -2578,7 +2578,7 @@ PrefabInstance:
       objectReference: {fileID: 7400000, guid: b1d6a8954d2b95f4396e28d31172068d, type: 2}
     - target: {fileID: 3444841110003726075, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
       propertyPath: siguienteEscena
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6191212658329089249, guid: 1fa3f358cdffbe54fac88b89ce28ff11, type: 3}
       propertyPath: m_Name
@@ -3347,7 +3347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c55bdcbe80f9c4384524c5b89f63c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
+  bullet: {fileID: 5176250936428081890, guid: f8783f119c4d7e64687289bfe633cc50, type: 3}
   bulletPos: {fileID: 6588954731459475214}
   vida: {fileID: 8468766208951866878}
   player: {fileID: 2140560736918969481}
@@ -3605,8 +3605,9 @@ GameObject:
   - component: {fileID: 253552335824686914}
   - component: {fileID: 6722418682769067801}
   - component: {fileID: 4921357198042857567}
+  - component: {fileID: 8313901527149803980}
   m_Layer: 0
-  m_Name: EnemyMele (7)
+  m_Name: EnemyMele (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3740,7 +3741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59c55bdcbe80f9c4384524c5b89f63c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 3849873563414284291, guid: 271dc1d9b8bff7d40859f71e62fae942, type: 3}
+  bullet: {fileID: 5176250936428081890, guid: f8783f119c4d7e64687289bfe633cc50, type: 3}
   bulletPos: {fileID: 4881684690368459155}
   vida: {fileID: 8468766208951866878}
   player: {fileID: 2140560736918969481}
@@ -4330,7 +4331,7 @@ GameObject:
   - component: {fileID: 827728837121859081}
   - component: {fileID: 1331471872842305871}
   m_Layer: 0
-  m_Name: EnemyMele (6)
+  m_Name: EnemyMele (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4659,7 +4660,7 @@ GameObject:
   - component: {fileID: 2751991220947771040}
   - component: {fileID: 4555374597223715302}
   m_Layer: 0
-  m_Name: EnemyMele (5)
+  m_Name: EnemyMele
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4680,8 +4681,9 @@ GameObject:
   - component: {fileID: 8695637615651976720}
   - component: {fileID: 2766060069356222027}
   - component: {fileID: 4568335137918482701}
+  - component: {fileID: 8695637615651976721}
   m_Layer: 0
-  m_Name: EnemyMele (8)
+  m_Name: EnemyMele (3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4718,6 +4720,33 @@ MonoBehaviour:
   player: {fileID: 2140560736918969481}
   speed: 1.25
   spriteScaleX: 10.5
+--- !u!50 &8313901527149803980
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423251390696741739}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!4 &8375779899744276958
 Transform:
   m_ObjectHideFlags: 0
@@ -4869,6 +4898,33 @@ MonoBehaviour:
   maxHealth: 25
   inmortal: 0
   gameOver: 0
+--- !u!50 &8695637615651976721
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559775003277238841}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!95 &8705175933094014283
 Animator:
   serializedVersion: 5

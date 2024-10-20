@@ -10,8 +10,9 @@ public class SpawnEnemies : MonoBehaviour
      public GameObject[] gameObjectsToActivate; // Array de GameObjects para activar
     private int currentIndex = 0;   
     private bool isSpawningActive = false; 
-    public GameObject itemPrefab; // Prefab del ítem que aparecerá
+    public GameObject itemPrefab, itemInmo; // Prefab del ítem que aparecerá
     private bool itemSpawned = false;
+    private bool itemSpawnedInmo = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -54,10 +55,17 @@ public class SpawnEnemies : MonoBehaviour
                 // Instancia el ítem en la posición del jugador
                 Instantiate(itemPrefab, Vector2.zero, Quaternion.identity);
                 itemSpawned = true;
-            } else if(healthPlayer.health == healthPlayer.maxHealth)
+            } else if(healthPlayer.health >= healthPlayer.maxHealth/2)
             {
                 itemSpawned = false;
             }
+
+            if(healthPlayer.health <= 12 && !itemSpawnedInmo)
+            {
+                // Instancia el ítem en la posición del jugador
+                Instantiate(itemInmo, new Vector2(-3f,0f), Quaternion.identity);
+                itemSpawnedInmo = true;
+            } 
         }
     }
 

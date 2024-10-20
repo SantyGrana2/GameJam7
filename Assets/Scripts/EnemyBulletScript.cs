@@ -12,16 +12,15 @@ public class EnemyBulletScript : MonoBehaviour
     public int damageBullet;
 
     //Disparar hacia donde esta el jugador
-    private void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-
-        Vector3 direction = player.transform.position - transform.position;
-        rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+        MoveArrow();
+        
     }
 
-    //Validaci�n para optimizar, que cuando pasen 7 segundos se destruyan las balas
+    //Validaci�n para optimizar, que cuando pasen 7 segundos se destruyan las balas
     private void Update()
     {
         timer += Time.deltaTime;
@@ -41,5 +40,25 @@ public class EnemyBulletScript : MonoBehaviour
             playerHealth.TakeDamage(damageBullet);
             Destroy(gameObject);
         }
+    }
+
+    private void MoveArrow()
+    {
+        // Calcula la dirección desde la flecha hacia el jugador
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+
+        // Encuentra el GameObject "punta" dentro de la flecha
+        Transform punta = gameObject.transform.Find("punta");
+
+        if (punta != null)
+        {
+            // Calcula la rotación para que la punta apunte hacia el jugador
+            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            gameObject.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+
+            // Aplica la velocidad a la flecha en la dirección del jugador
+            rb.velocity = direction * force;
+        }
+
     }
 }
