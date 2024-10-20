@@ -13,6 +13,7 @@ public class SpawnEnemies : MonoBehaviour
     public GameObject itemPrefab, itemInmo; // Prefab del ítem que aparecerá
     private bool itemSpawned = false;
     private bool itemSpawnedInmo = false;
+    public bool bossIsDie = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class SpawnEnemies : MonoBehaviour
 
             if (healthBoss.health <= 0)
             {
+                bossIsDie = true;
                 // Detener la invocación si está activa
                 CancelInvoke("ActivateNextGameObject");
                 isSpawningActive = false; // Cambia el estado para evitar múltiples invocaciones

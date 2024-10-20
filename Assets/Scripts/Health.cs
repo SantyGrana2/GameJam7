@@ -48,7 +48,6 @@ public class Health : MonoBehaviour
                     isDead = true;
                     endGame.End();
                 }
-
             } 
         }
         barraDeVida.CambiatVidaActual(health);
