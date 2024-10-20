@@ -2243,7 +2243,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 13
+      m_TileSpriteIndex: 14
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2393,7 +2393,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 12
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2464,12 +2464,12 @@ Tilemap:
     m_Data: {fileID: -1156085013, guid: 779a67d368fed944aaf6224379a2691d, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 1492825687, guid: 779a67d368fed944aaf6224379a2691d, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -957916933, guid: 779a67d368fed944aaf6224379a2691d, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 106
     m_Data: {fileID: 802744645, guid: 779a67d368fed944aaf6224379a2691d, type: 3}
   - m_RefCount: 1
@@ -2947,7 +2947,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 190}
-  m_SizeDelta: {x: 1920, y: 65}
+  m_SizeDelta: {x: 238.4, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &580737994
 MonoBehaviour:

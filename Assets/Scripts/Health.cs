@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
     {
         health = maxHealth;
         animacionController = GetComponent<Animator>();
-        if (barraDeVida != null) // Asegúrate de que barraDeVida esté asignado
+        if (barraDeVida != null) // Asegurar de que barraDeVida esté asignado
         {
             barraDeVida.IniciarBarraDeVida(health);
         }
@@ -50,11 +50,18 @@ public class Health : MonoBehaviour
                     gameOver = true;
                     isDead = true;
                     endGame.End();
+                    
                 }
-            } 
+                
+            }
+
+            if (gameObject.CompareTag("Player") && barraDeVida != null) 
+        {
+            barraDeVida.CambiatVidaActual(health); 
+        } 
         }
         
-        barraDeVida.CambiatVidaActual(health);
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
