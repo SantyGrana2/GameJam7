@@ -3591,7 +3591,6 @@ GameObject:
   - component: {fileID: 2448655428341333156}
   - component: {fileID: 5388524879556353907}
   - component: {fileID: 423756164488422515}
-  - component: {fileID: 5388524879556353908}
   m_Layer: 0
   m_Name: PowerUp2
   m_TagString: PowerupText
@@ -3922,19 +3921,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5388524879556353908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860665845809150876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8ae11e7e496614e85c99d402c09194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textIndex: 1
 --- !u!60 &5602201294507531271
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4044,7 +4030,6 @@ GameObject:
   - component: {fileID: 6009765231799573310}
   - component: {fileID: 151141549075402151}
   - component: {fileID: 1528961406379524285}
-  - component: {fileID: 7115533539311780356}
   m_Layer: 0
   m_Name: PowerUp3
   m_TagString: PowerupText
@@ -4052,19 +4037,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &7115533539311780356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7115533539311780355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8ae11e7e496614e85c99d402c09194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textIndex: 2
 --- !u!1 &7669303645143286967
 GameObject:
   m_ObjectHideFlags: 0
@@ -4076,7 +4048,6 @@ GameObject:
   - component: {fileID: 8426528987498189138}
   - component: {fileID: 5174907417201638039}
   - component: {fileID: 3744947951378880207}
-  - component: {fileID: 8426528987498189139}
   m_Layer: 0
   m_Name: PowerUp1
   m_TagString: PowerupText
@@ -4121,19 +4092,6 @@ Transform:
   - {fileID: 2019702681}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8426528987498189139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7669303645143286967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8ae11e7e496614e85c99d402c09194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textIndex: 0
 --- !u!50 &9004116841384548483
 Rigidbody2D:
   serializedVersion: 4
