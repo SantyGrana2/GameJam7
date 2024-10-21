@@ -24,18 +24,26 @@ public class AIEnemy : MonoBehaviour
     {
         if(!vida.gameOver)
         {
-        // Seguimiento al jugador sin rotaci�n
+            // Seguimiento al jugador sin rotaci�n
             distance = Vector2.Distance(transform.position, player.transform.position);
+
+            if (distance > 1.0f) // Cambia 1.0f a la distancia que desees
+            {
+                transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+                animController.SetTrigger("Walking");
+            }
+            else
+            {
+                animController.SetTrigger("Attack");
+            }
+
+            // Ajuste de escala del sprite según la dirección del jugador
             Vector2 direction = player.transform.position - transform.position;
-
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-            animController.SetTrigger("Walking");
-
-            if (direction.x > 0)  // Si el jugador está a la derecha
+            if (direction.x > 0)
             {
                 transform.localScale = new Vector3(spriteScaleX, transform.localScale.y, transform.localScale.z);
             }
-            else if (direction.x < 0)  // Si el jugador está a la izquierda
+            else if (direction.x < 0)
             {
                 transform.localScale = new Vector3(-spriteScaleX, transform.localScale.y, transform.localScale.z);
             }
