@@ -27,7 +27,7 @@ public class AIEnemy : MonoBehaviour
             // Seguimiento al jugador sin rotaci�n
             distance = Vector2.Distance(transform.position, player.transform.position);
 
-            if (distance > 1.0f) // Cambia 1.0f a la distancia que desees
+            if (distance > 0.4f) // Cambia 1.0f a la distancia que desees
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
                 animController.SetTrigger("Walking");
