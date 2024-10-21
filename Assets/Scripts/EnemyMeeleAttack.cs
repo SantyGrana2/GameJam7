@@ -21,6 +21,7 @@ public class EnemyMeeleAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !playerHealth.gameOver)
         {
+            
             playerHealth.TakeDamage(damage);
             animController.SetTrigger("Attack");
         }

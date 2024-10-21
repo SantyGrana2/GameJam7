@@ -38,7 +38,7 @@ public class SpawnEnemies : MonoBehaviour
                 }
             }
 
-            if (healthBoss.health <= 0)
+            if (healthBoss.health <= 0 || GameObject.Find("Boss") == null)
             {
                 bossIsDie = true;
                 // Detener la invocación si está activa
